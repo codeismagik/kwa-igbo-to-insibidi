@@ -3,9 +3,9 @@ import random
 # ==================================
 # PROGRAM STARTS HERE
 
-sample = "ikpe i kpe ekpere e kpe re"
+sample = input("LATIN IGBO TEXT:  ")
 
-nsibidi = open("IgbotoNsibidi.json" , encoding="utf8")
+nsibidi = open("IgbotoNsibidi2.json" , encoding="utf8")
 nsibidi = json.load(nsibidi)
 nsibidi = dict(nsibidi)
 
@@ -86,24 +86,3 @@ else:
     print("No words found")
 
 #============================================
-# No longer useful code
-"""def randomAnswer(ans = nsibidi_sent):
-    if type(nsibidi_sent) == list:
-        import random
-        ans = random.choice(nsibidi_sent)
-        return (' '.join(ans))
-    elif type(nsibidi_sent) == str:
-        return (' '.join(ans))"""
-
-"""def choiceAnswer(ans = nsibidi_sent):
-    #instead of picking a random answer this will ask the user what answer they want
-    if type(nsibidi_sent) == list:
-        print("Choose an answer")
-        for i in range(len(nsibidi_sent)):
-            print(i, nsibidi_sent[i])
-        ans = int(input("Enter the number of the answer you want: "))
-        return (' '.join(nsibidi_sent[ans]))
-    else:
-        return(' '.join(nsibidi_sent))"""
-
-

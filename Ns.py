@@ -1,5 +1,6 @@
 import json
 import random
+import re
 # ==================================
 # PROGRAM STARTS HERE
 
@@ -11,7 +12,16 @@ nsibidi = dict(nsibidi)
 
 randomiser = random.choice(list(nsibidi.keys()))
 
-def userPrompt(result = sample):
+# printing original string
+print("The original string is : " + sample)
+
+# Removing punctuations in string
+# Using regex
+res = re.sub(r'[^\w\s]', '', sample)
+print("The string after punctuation filter : " + res)
+
+
+def userPrompt(result = res):
     return result
 latin_sent = userPrompt() # input any value into the bracket to translate that value or leave it blank to translate a random word
 
@@ -86,3 +96,4 @@ else:
     print("No words found")
 
 #============================================
+
